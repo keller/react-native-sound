@@ -125,6 +125,8 @@ public class RNSoundModule extends ReactContextBaseJavaModule implements AudioMa
       }
     });
 
+    module.playerPool.put(key, player);
+
     try {
       player.prepareAsync();
     } catch (IllegalStateException ignored) {
