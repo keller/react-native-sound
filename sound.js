@@ -77,6 +77,7 @@ Sound.prototype.stop = function(callback) {
 Sound.prototype.release = function() {
   if (this._loaded) {
     RNSound.release(this._key);
+    this._loaded = false;
   }
   return this;
 };
